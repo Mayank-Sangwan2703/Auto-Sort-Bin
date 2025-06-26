@@ -9,13 +9,14 @@ AutoSortBin is a smart bin system combining **IoT**, **Computer Vision**, and **
 
 ## 📁 Folder Structure
 
+```
 AutoSortBin/
-├── wokwi-circuit/ # ESP32 Wokwi simulation (main.cpp, diagram.json)
-├── model-part/ # CNN model, training scripts, classification logic
-├── thingspeak-code/ # Code for ESP32 + ThingSpeak API integration
-├── screenshots/ # LCD display and circuit output examples
+├── wokwi-circuit/       # ESP32 Wokwi simulation (main.cpp, diagram.json)
+├── model-part/          # CNN model, training scripts, classification logic
+├── thingspeak-code/     # Code for ESP32 + ThingSpeak API integration
+├── screenshots/         # LCD display and circuit output examples
 └── README.md
-
+```
 
 ---
 
@@ -38,7 +39,7 @@ AutoSortBin/
 
 - 🔔 **Bin Full Alerts**  
   - If a bin is full (detected via ultrasonic sensors), the lid won’t open  
-  - Alert sent to ThingSpeak with timestamp
+  - Alert sent to ThingSpeak with timestamp  
 
 ---
 
@@ -69,58 +70,69 @@ AutoSortBin/
 ```bash
 git clone https://github.com/Avin-Chaudhary/AutoSortBin.git
 cd AutoSortBin
-📍 Install Model Dependencies
-bash
-Copy
-Edit
+```
+
+### 📍 Install Model Dependencies
+
+```bash
 pip install tensorflow keras numpy pillow matplotlib opencv-python
-🔌 Circuit Simulation on Wokwi
-Open Wokwi
+```
 
-Upload files from wokwi-circuit/
+### 🔌 Circuit Simulation on Wokwi
 
-Connect: ESP32 + Servo + LCD + Ultrasonic Sensor (as per diagram.json)
+1. Open [Wokwi](https://wokwi.com/)
+2. Upload files from the `wokwi-circuit/` folder
+3. Use `diagram.json` to connect: **ESP32 + Servo + LCD + Ultrasonic Sensor**
 
-☁️ ThingSpeak Setup
-Sign up on ThingSpeak
+### ☁️ ThingSpeak Setup
 
-Create a channel and generate your Write API Key
+1. Sign up on [ThingSpeak](https://thingspeak.com)
+2. Create a new channel and generate your **Write API Key**
+3. Replace the key in the file `thingspeak-code/esp32-thingspeak.ino`
 
-Replace the key in the code inside thingspeak-code/esp32-thingspeak.ino
-▶️ How to Run
-Start the system via Wokwi or real hardware
+---
 
-Place waste object under camera (or run model script with sample images)
+## ▶️ How to Run
 
-Model classifies the waste type
+1. Power the system (hardware or Wokwi simulation)  
+2. Place waste object in front of the camera  
+3. Image is classified using the trained CNN model  
+4. Corresponding bin lid opens automatically via servo  
+5. LCD displays the detected category  
+6. If bin is full → lid stays shut & alert is sent  
+7. ThingSpeak dashboard updates with latest data  
 
-Corresponding bin opens via servo
+---
 
-LCD shows category and level
+## 🌱 Future Scope
 
-If bin is full → no open + cloud alert
+- GSM module for SMS alerts  
+- Advanced sensors (moisture, IR, odor) for better detection  
+- Solar-powered design with backup battery  
+- Full hardware prototype with enclosure  
+- Cloud analytics using Firebase or Google Cloud  
 
-ThingSpeak dashboard updates live
-🌱 Future Scope
-Add GSM module for SMS alerts
+---
 
-Use moisture, IR, or odor sensors for precision
+## 🙌 Contributing
 
-Solar-powered design for green energy
+Contributions are welcome!  
+Fork the repo, improve it, and submit a pull request 🚀
 
-Real-world prototype deployment with multi-bin hardware
+---
 
-Dashboard with analytical charts & Firebase/Google Cloud support
+## 👨‍💻 Author
 
-🙌 Contributing
-All contributions are welcome!
-Please fork the repo, add your features or fixes, and submit a pull request.
-👨‍💻 Author
-Avin Chaudhary
-3rd Year Tech Enthusiast | Frontend Developer
-National Institute of Technology, Kurukshetra (IT '27)
-🔗 LinkedIn | GitHub
+**Avin Chaudhary**  
+3rd Year Tech Enthusiast | Frontend Developer  
+National Institute of Technology, Kurukshetra (IT '27)  
+🔗 [LinkedIn](https://www.linkedin.com/in/avin-chaudhary-728a992aa) | [GitHub](https://github.com/Avin-Chaudhary)
 
-⚠️ License & Disclaimer
-This repository is for educational and research purposes only.
-It does not include a license. Please do not reuse for commercial use without permission.
+---
+
+## ⚠️ License & Disclaimer
+
+This repository is for **educational and research demonstration purposes** only.  
+It does **not include a license**. Please do not reuse commercially without permission.
+
+---
