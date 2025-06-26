@@ -1,13 +1,13 @@
-# ♻️ AutoSortBin: An IoT and Deep Learning Based Smart Waste Segregation System
+#  AutoSortBin: An IoT and Deep Learning Based Smart Waste Segregation System
 
 AutoSortBin is a smart bin system combining **IoT**, **Computer Vision**, and **Cloud Monitoring** to automatically segregate waste into six categories: **Paper, Glass, Metal, Plastic, Organic, and E-Waste**. It uses a custom-trained **DenseNet-121 CNN model**, an **ESP32-based simulated circuit on Wokwi**, and **ThingSpeak** for real-time monitoring and bin-full alerts.
 
-🎓 This work was presented in the research paper:  
+ This work was presented in the research paper:  
 **_"AutoSortBin: Integrating CPS and IoT with Densely Connected Convolutional Networks for Sustainable Waste Management"_**
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```
 AutoSortBin/
@@ -20,37 +20,37 @@ AutoSortBin/
 
 ---
 
-## 🚀 Features
+##  Features
 
-- ✅ **Deep Learning Classification**  
+-  **Deep Learning Classification**  
   - DenseNet-121 used for high-accuracy waste classification  
   - 976 custom-labeled images across 6 classes: Paper, Glass, Metal, Plastic, Organic, E-Waste  
 
-- 🌐 **IoT Cloud Monitoring**  
+-  **IoT Cloud Monitoring**  
   - Live status updates on bin fullness using ThingSpeak  
   - Automatic updates of bin levels and type detection  
 
-- 🤖 **Smart Automation**  
+-  **Smart Automation**  
   - Servo motors open the correct bin lid based on classification  
   - LCD shows the detected waste type and status  
 
-- 💡 **Wokwi Simulation**  
+-  **Wokwi Simulation**  
   - Complete ESP32 circuit simulated with ultrasonic sensors, LCD, and servo motors  
 
-- 🔔 **Bin Full Alerts**  
+-  **Bin Full Alerts**  
   - If a bin is full (detected via ultrasonic sensors), the lid won’t open  
   - Alert sent to ThingSpeak with timestamp  
 
 ---
 
-## 📸 Dataset
+##  Dataset
 
 📁 **Dataset (Google Drive):**  
 [🔗 AutoSortBin Image Dataset](https://drive.google.com/drive/folders/1Bq1_ukUqxVlyDr2GdsxmJd0NrJQ-x3Mm?usp=sharing)
 
 ---
 
-## 📊 Experimental Results
+##  Experimental Results
 
 | Metric              | Value   |
 |---------------------|---------|
@@ -63,28 +63,28 @@ AutoSortBin/
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
-### 🔧 Clone This Repository
+###  Clone This Repository
 
 ```bash
 git clone https://github.com/Avin-Chaudhary/AutoSortBin.git
 cd AutoSortBin
 ```
 
-### 📍 Install Model Dependencies
+###  Install Model Dependencies
 
 ```bash
 pip install tensorflow keras numpy pillow matplotlib opencv-python
 ```
 
-### 🔌 Circuit Simulation on Wokwi
+###  Circuit Simulation on Wokwi
 
 1. Open [Wokwi](https://wokwi.com/)
 2. Upload files from the `wokwi-circuit/` folder
 3. Use `diagram.json` to connect: **ESP32 + Servo + LCD + Ultrasonic Sensor**
 
-### ☁️ ThingSpeak Setup
+###  ThingSpeak Setup
 
 1. Sign up on [ThingSpeak](https://thingspeak.com)
 2. Create a new channel and generate your **Write API Key**
@@ -92,7 +92,7 @@ pip install tensorflow keras numpy pillow matplotlib opencv-python
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 1. Power the system (hardware or Wokwi simulation)  
 2. Place waste object in front of the camera  
@@ -104,7 +104,7 @@ pip install tensorflow keras numpy pillow matplotlib opencv-python
 
 ---
 
-## 🌱 Future Scope
+##  Future Scope
 
 - GSM module for SMS alerts  
 - Advanced sensors (moisture, IR, odor) for better detection  
@@ -114,25 +114,3 @@ pip install tensorflow keras numpy pillow matplotlib opencv-python
 
 ---
 
-## 🙌 Contributing
-
-Contributions are welcome!  
-Fork the repo, improve it, and submit a pull request 🚀
-
----
-
-## 👨‍💻 Author
-
-**Avin Chaudhary**  
-3rd Year Tech Enthusiast | Frontend Developer  
-National Institute of Technology, Kurukshetra (IT '27)  
-🔗 [LinkedIn](https://www.linkedin.com/in/avin-chaudhary-728a992aa) | [GitHub](https://github.com/Avin-Chaudhary)
-
----
-
-## ⚠️ License & Disclaimer
-
-This repository is for **educational and research demonstration purposes** only.  
-It does **not include a license**. Please do not reuse commercially without permission.
-
----
